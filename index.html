@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="style.css" />
+		<title>Hello World!</title>
+	</head>
+	<body>
+		<main>
+			<audio
+				id="realAudio"
+				src="assets/1.mp3"
+				onclick="printf(event)"
+				preload="metadata"
+				loop
+			></audio>
+			<div class="myAudioWrapper">
+				<div class="cover">
+					<div class="overlay"></div>
+					<div class="songDetails">
+						<span class="fav"><i class="far fa-heart"></i></span>
+						<p class="title">Fighting Back</p>
+						<p class="author">Neffex</p>
+						<span class="time">03:45</span>
+					</div>
+				</div>
+				<div class="controlsWrapper">
+					<div class="play" id="mainPlay">
+						<i class="fas fa-play-circle"></i>
+					</div>
+					<div class="seeker">
+						<span id="played">00:00</span>
+						<input
+							type="range"
+							id="seekingStick"
+							oninput="seekPlayer(this.value)"
+							value="0"
+						/>
+						<span id="total">03:45</span>
+					</div>
+					<div class="volume">
+						<i class="fas fa-volume-up"></i>
+						<input
+							type="range"
+							name="volume"
+							id="volume"
+							min="0"
+							max="1"
+							step="0.01"
+							oninput="changeVolume(this.value)"
+						/>
+					</div>
+				</div>
+				<div class="musicList">
+					<div class="song">
+						<div class="songImgWrapper">
+							<img src="assets/1c.jpg" alt="" />
+						</div>
+						<div class="song-play-btn">
+							<i class="far fa-play-circle" id="1"></i>
+						</div>
+						<div class="list-song-details">
+							<h3>Rise Up</h3>
+							<span>TheFatRat</span>
+						</div>
+						<div class="list-song-ranking">
+							<i class="fas fa-star red"></i>
+							<i class="fas fa-star red"></i>
+							<i class="fas fa-star red"></i>
+							<i class="fas fa-star-half-alt red"></i>
+							<i class="far fa-star"></i>
+						</div>
+					</div>
+					<div class="song">
+						<div class="songImgWrapper">
+							<img src="assets/2c.png" alt="" />
+						</div>
+						<div class="song-play-btn">
+							<i class="far fa-play-circle" id="2"></i>
+						</div>
+						<div class="list-song-details">
+							<h3>Fighting Back</h3>
+							<span>Neffex</span>
+						</div>
+						<div class="list-song-ranking">
+							<i class="fas fa-star red"></i>
+							<i class="fas fa-star red"></i>
+							<i class="fas fa-star red"></i>
+							<i class="fas fa-star red"></i>
+							<i class="fas fa-star-half-alt red"></i>
+						</div>
+					</div>
+					<div class="song">
+						<div class="songImgWrapper">
+							<img src="assets/3c.jpg" alt="" />
+						</div>
+						<div class="song-play-btn">
+							<i class="far fa-play-circle" id="3"></i>
+						</div>
+						<div class="list-song-details">
+							<h3>Alone</h3>
+							<span>TheFatRat</span>
+						</div>
+						<div class="list-song-ranking">
+							<i class="fas fa-star red"></i>
+							<i class="fas fa-star red"></i>
+							<i class="fas fa-star-half-alt red"></i>
+							<i class="far fa-star"></i>
+							<i class="far fa-star"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<script src="app.js"></script>
+	</body>
+</html>
